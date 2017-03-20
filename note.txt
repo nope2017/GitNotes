@@ -53,3 +53,5 @@
 			创建+切换分支： git checkout -b <name>
 			合并某分支到当前分支： git merge <name>
 			删除分支：	git branch -b <name>
+			
+	11.HEAD 指向 master（或其他分支） , master 指向最新的提交
