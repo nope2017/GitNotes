@@ -1,0 +1,34 @@
+	
+	版本回退：
+		1.HEAD 指向的版本就是当前版本，Git允许在版本的历史之间穿梭，
+		使用命令 git reset --hard commit_id。
+		
+		2.穿梭前，用 git log 可以查看提交历史，以便确定要回退到哪个版本；
+		如果嫌输出信息太多，看的眼花缭乱，可以加上 --pretty=oneline参数；
+		
+		3.要重返未来，用git reflog 查看命令历史，以便确定要回到未来的哪个版本.
+		
+	工作区和暂存区
+		1.版本库（Repository） ==》工作区的隐藏目录 .git;
+		2. 大概流程：
+			工作区 ：add  ==>  暂存区index(stage) ==>commit    HEAD (master)
+			
+	管理修改
+		1.Git跟踪并管理的是修改，而非文件;
+		2.git diff HEAD -- filename ==> 查看工作区和版本库里最新版本的区别；
+		3.每次修改，如果不 add 到暂存区，那就不会加入到commit中。
+		
+	撤销修改
+		1.当乱改工作区中某个文件的内容，想直接丢弃工作区的修改时，用 git checkout -- filename;
+		2.当将内容添加到暂存区时，丢弃修改分两步：1）用命令 git reset HEAD file ,回到1，按步骤1操作；
+		3.如果提交修改到版本库，要撤销，参考版本回退。
+		
+	删除文件
+		1.rm 删除本地文件
+		2.git rm 删除版本库中一个文件;
+	
+	远程仓库
+		1.创建SSH Key:
+			ssh-keygen -t rsa -C "youremail@example.com";
+		2.用户主目录下，.ssh目录， id_rsa是私钥，id_rsa.pub是公钥。
+		

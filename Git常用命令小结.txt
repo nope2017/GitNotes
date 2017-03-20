@@ -1,0 +1,56 @@
+查看文件改动以及新增的文件
+	git status 
+添加新增文件
+	git add your_file_path 
+// 添加全部文件
+	git add * 
+// 添加某类型文件
+	git add dir/*.js 
+简单的提交文件
+	git commit -m "Commit message" 
+提交你所有的修改文件以及添加的文件
+	git commit -am 'your message' 
+撤销修改某个文件
+	git checkout -- <filename> 
+放弃本地所有修改
+	git fetch origin 
+	git reset --hard origin/master
+ 
+	更新相关
+更新远程代码
+	git pull 
+显示合并冲突文件
+	git diff 
+查看某个合并冲突文件
+	git diff --base <filename> 
+添加解决冲突后文件
+	git add <filename> 
+提交你的改动到主干上
+	git push origin master 
+
+
+	分支相关
+创建新分支并且切到该分支
+	git checkout -b your_branch_name 
+切换分支
+	git checkout your_branch_name 
+查看所在分支以及分支列表
+	git branch 
+提交给某分支	
+	git push origin your_branch_name 
+对比分支差异
+	git diff <sourcebranch> <targetbranch> 
+合并某分支到你当前所在分支
+	git merge your_branch_name 
+删除远程仓库的分支
+	git push origin :your_branch_name 
+删除某分支
+	git branch -d your_branch_name 
+标签和项目初始化
+	git init 初始化项目名称 
+	git tag 0.9.1 <commitID> 
+
+	配置
+配置你的用户名和邮箱
+	git config --global user.name "Jack" 
+	git config --global user.email jack@gmail.com 
