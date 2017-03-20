@@ -1,8 +1,8 @@
 	
-		git add filename	添加到暂存区
+	1.	git add filename	添加到暂存区
 		git commit -m "some word"	传到版本库
 		
-	版本回退：
+	2.版本回退：
 		1.HEAD 指向的版本就是当前版本，Git允许在版本的历史之间穿梭，
 		使用命令 git reset --hard commit_id。
 		
@@ -11,27 +11,45 @@
 		
 		3.要重返未来，用git reflog 查看命令历史，以便确定要回到未来的哪个版本.
 		
-	工作区和暂存区
+	3.工作区和暂存区
 		1.版本库（Repository） ==》工作区的隐藏目录 .git;
 		2. 大概流程：
 			工作区 ：add  ==>  暂存区index(stage) ==>commit    HEAD (master)
 			
-	管理修改
+	4.管理修改
 		1.Git跟踪并管理的是修改，而非文件;
 		2.git diff HEAD -- filename ==> 查看工作区和版本库里最新版本的区别；
 		3.每次修改，如果不 add 到暂存区，那就不会加入到commit中。
 		
-	撤销修改
+	5.撤销修改
 		1.当乱改工作区中某个文件的内容，想直接丢弃工作区的修改时，用 git checkout -- filename;
 		2.当将内容添加到暂存区时，丢弃修改分两步：1）用命令 git reset HEAD file ,回到1，按步骤1操作；
 		3.如果提交修改到版本库，要撤销，参考版本回退。
 		
-	删除文件
+	6.删除文件
 		1.rm 删除本地文件
 		2.git rm 删除版本库中一个文件;
 	
-	远程仓库
+	7.远程仓库
 		1.创建SSH Key:
 			ssh-keygen -t rsa -C "youremail@example.com";
 		2.用户主目录下，.ssh目录， id_rsa是私钥，id_rsa.pub是公钥。
+	8.关联远程库
+		git remote add origin git@github.com:nope2017/GitNotes.git;
+	关联后，第一次推送master分支内容
+		git push -u origin master
+		此后推送
+			git push origin master
+			
+	9.从远程库克隆
+		要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆；	
+		git 支持多种协议，包括https,但通过ssh支持的原生git协议速度最快。
 		
+	10.分支管理
+		git鼓励大量使用分支：
+			查看分支： git branch
+			创建分支： git branch <name>
+			切换分支：	git checkout <name>
+			创建+切换分支： git checkout -b <name>
+			合并某分支到当前分支： git merge <name>
+			删除分支：	git branch -b <name>
