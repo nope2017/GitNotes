@@ -52,7 +52,7 @@
 			切换分支：	git checkout <name>
 			创建+切换分支： git checkout -b <name>
 			合并某分支到当前分支： git merge <name>
-			删除分支：	git branch -b <name>
+			删除分支：	git branch -d <name>
 			
 	11.HEAD 指向 master（或其他分支） , master 指向最新的提交
 
@@ -62,3 +62,9 @@
 		3.查看不同分支合并情况：
 			git log --graph=oneline --abbrev-commit
 		
+	13.合并分支时，加上 --no-ff 参数就可以用普通模式合并，合并后的历史有分支，能看出来
+		曾经做过合并，而 fast forward 合并就看不出来曾经做过合并。
+		git merge --no-ff -m "something" branch
+		
+		分支管理： 1.master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活。
+			干活都在分支上，即分支时不稳定的，都某个时候，再把分支合并到master上发布。
