@@ -55,3 +55,6 @@
 			删除分支：	git branch -b <name>
 			
 	11.HEAD 指向 master（或其他分支） , master 指向最新的提交
+
+	12.解决冲突
+		1.用git log --graph 命令可以看到分支合并图
