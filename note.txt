@@ -79,3 +79,9 @@
 		5.恢复现场：
 			1）git stash apply恢复，但stash的内容并没有删除，需用git stash drop来删除；
 			2）git stash pop，恢复的同时把stash内容也删了。
+			
+	15.Feature分支
+		开发一个新feature，最好新建一个分支；
+		强行删除：git branch -D <name>
+		
+	16.
