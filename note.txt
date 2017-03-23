@@ -135,6 +135,6 @@
 				
 	23.配置别名
 		如：st 配置成 status 的别名
-		git config --global alias st status
+		git config --global alias.st status   //注意alias后接一点再接别名
 		
 		--global参数是全局参数
