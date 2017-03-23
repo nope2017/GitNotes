@@ -122,3 +122,13 @@
 		4.删除已推送到远程的标签：
 			1）删除本地标签；
 			2）删除远程标签： git push origin :refs/tags/<tagname>;
+			
+	20.在github上参与别人的开源项目，先点Fork，在自己的账号下克隆一个仓库，然后再克隆岛本地仓库，
+		这样才能推送修改。
+		
+	21.让命令输出看起来更醒目：git config --global color.ui true
+	
+	22.忽略某些文件时，需要编写.gitignore;
+		.gitignore 文件本身要放到版本库，并且可以对.gitignore做版本管理；
+		检查.gitignore:
+				git check-ignore
