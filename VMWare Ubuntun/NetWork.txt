@@ -1,0 +1,5 @@
+1.添加环境变量
+	修改/etc/profile文件，在文件末尾加上如下两句代码
+	PATH=$PATH:/sbin
+	export PATH
+	$PATH:后面是要加入的环境变量的目录
